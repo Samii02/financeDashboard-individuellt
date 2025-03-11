@@ -10,9 +10,9 @@ function Navbar() {
       <NavLink to="/playlist" className="">
         Playlists
       </NavLink>
-      <NavLink to="/recommend" className="">
+      <NavLink to="/company" className="">
         {" "}
-        Recommend
+        Company
       </NavLink>
       <NavLink to="/contact" className="">
         {" "}
