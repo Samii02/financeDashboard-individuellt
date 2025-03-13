@@ -23,7 +23,6 @@ const nasdaqCompanies = [
     { name: "AMD", symbol: "AMD" },
     { name: "Marvell Technology", symbol: "MRVL" },
     { name: "Intuit", symbol: "INTU" },
-    { name: "Tesla", symbol: "TSLA" },
     { name: "Lam Research", symbol: "LRCX" },
     { name: "Costco", symbol: "COST" },
     { name: "DexCom", symbol: "DXCM" },
@@ -34,7 +33,36 @@ const nasdaqCompanies = [
     { name: "NXP Semiconductors", symbol: "NXPI" },
     { name: "Regeneron Pharmaceuticals", symbol: "REGN" },
     { name: "Workday", symbol: "WDAY" },
-    { name: "KLA Corporation", symbol: "KLAC" }
-    ];
+    { name: "KLA Corporation", symbol: "KLAC" },
+    { name: "Activision Blizzard", symbol: "ATVI" },
+    { name: "American Airlines", symbol: "AAL" },
+    { name: "Bristol-Myers Squibb", symbol: "BMY" },
+    { name: "Biogen", symbol: "BIIB" },
+    { name: "Amgen", symbol: "AMGN" },
+    { name: "Celgene", symbol: "CELG" },
+    { name: "FISV", symbol: "FISV" },
+    { name: "First Republic Bank", symbol: "FRC" },
+    { name: "Roku", symbol: "ROKU" },
+    { name: "SquareSpace", symbol: "SQSP" },
+    { name: "Electronic Arts", symbol: "EA" },
+    { name: "Kroger", symbol: "KR" },
+    { name: "Mylan", symbol: "MYL" },
+    { name: "Veeva Systems", symbol: "VEEV" },
+    { name: "Lululemon", symbol: "LULU" },
+    { name: "Paychex", symbol: "PAYX" },
+    { name: "AstraZeneca", symbol: "AZN" },
+    { name: "Expedia Group", symbol: "EXPE" },
+    { name: "T-Mobile", symbol: "TMUS" },
+    { name: "Chipotle", symbol: "CMG" },
+    { name: "Qualys", symbol: "QLYS" },
+    { name: "Trade Desk", symbol: "TTD" },
+    { name: "Okta", symbol: "OKTA" },
+    { name: "Zscaler", symbol: "ZS" },
+    { name: "CrowdStrike", symbol: "CRWD" },
+    { name: "Twilio", symbol: "TWLO" },
+    { name: "MongoDB", symbol: "MDB" },
+    { name: "Cloudflare", symbol: "NET" }
+  ];
   
   export default nasdaqCompanies;
+  
