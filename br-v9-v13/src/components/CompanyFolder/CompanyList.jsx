@@ -3,11 +3,13 @@ import CompanyCard from './CompanyCard';
 
 function CompanyList({ companies }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {companies.map((company) => (
-        <CompanyCard key={company.symbol} company={company} />
+        <article key={company.symbol} className="border p-4 rounded-lg shadow-md">
+          <CompanyCard company={company} />
+        </article>
       ))}
-    </div>
+    </section>
   );
 }
 
