@@ -7,26 +7,29 @@ const Footer = () => {
         {/* Grid Layout för footer-sektioner */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Shortcuts Section */}
-          <article>
+          <article className="flex flex-col">
             <h4 className="text-lg font-semibold mb-2">Shortcuts</h4>
-            <Link to="/" className="footerLink hover:text-blue-200 block mb-2">
+            <Link
+              to="/"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
+            >
               Home
             </Link>
             <Link
               to="StocksAndA"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Stocks And Analyses
             </Link>
             <Link
               to="Company"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Company
             </Link>
           </article>
           {/* GitHub Links Section */}
-          <article>
+          <article className="flex flex-col">
             <h4 className="text-lg font-semibold mb-2 flex items-center">
               <img
                 className="w-6 h-6 mr-2"
@@ -39,7 +42,7 @@ const Footer = () => {
               href="https://github.com/Albin-Tenghagen"
               target="_blank"
               rel="noopener noreferrer"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Albin
             </a>
@@ -47,7 +50,7 @@ const Footer = () => {
               href="https://github.com/ThaisonL"
               target="_blank"
               rel="noopener noreferrer"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Phi-Thai
             </a>
@@ -55,13 +58,13 @@ const Footer = () => {
               href="https://github.com/Samii02"
               target="_blank"
               rel="noopener noreferrer"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Sami
             </a>
           </article>
           {/* LinkedIn Links Section */}
-          <article>
+          <article className="flex flex-col">
             <h4 className="text-lg font-semibold mb-2 flex items-center">
               <img
                 className="w-6 h-6 mr-2"
@@ -74,7 +77,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/albin-tenghagen-980685211/"
               target="_blank"
               rel="noopener noreferrer"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Albin
             </a>
@@ -82,7 +85,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/phi-thai-lai-299968330/"
               target="_blank"
               rel="noopener noreferrer"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Phi-Thai
             </a>
@@ -90,7 +93,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/sami-al-halabi-1aab76329/"
               target="_blank"
               rel="noopener noreferrer"
-              className="footerLink hover:text-blue-200 block mb-2"
+              className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Sami
             </a>
@@ -98,9 +101,15 @@ const Footer = () => {
           {/* Trademark Section */}
           <article className="lg:col-span-1">
             <h4 className="text-lg font-semibold mb-2">Trademark</h4>
-            <p>Trady Lady</p>
-            <p>Owns our soul</p>
-            <p>© {currentYear}</p>
+            <p className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg cursor-pointer">
+              Trady Lady
+            </p>
+            <p className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg cursor-pointer">
+              Owns our soul
+            </p>
+            <p className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg cursor-pointer">
+              © {currentYear}
+            </p>
           </article>
         </div>
       </div>

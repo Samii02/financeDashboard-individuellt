@@ -104,9 +104,14 @@ function HistoricalComparisonComponent() {
             <ReferenceLine
               y={benchmarks[selectedMetric]}
               stroke="red"
-              label="Benchmark"
+              strokeWidth={2}
             />
-            <Line type="linear" dataKey="value" stroke="#2f21a7" />
+            <Line
+              type="linear"
+              dataKey="value"
+              stroke="#2f21a7"
+              strokeWidth={2}
+            />
             <Line type="basis" dataKey="Benchmark" stroke="#dd0000" />
           </LineChart>
         </ResponsiveContainer>
