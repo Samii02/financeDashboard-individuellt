@@ -33,7 +33,7 @@ function HistoricalPrices() {
         Apples stock worth in $ since the turn of the century
       </h2>
       {data?.historical ? (
-        <section className="flex justify-center w-11/12 pt-5 h-[425px] bg-[#fcfcfc] rounded-lg shadow-lg">
+        <section className="flex justify-center w-11/12 pt-5 h-[425px] bg-cardBg rounded-lg shadow-lg">
           <ResponsiveContainer width="90%" height={400}>
             <LineChart
               data={[...data.historical]

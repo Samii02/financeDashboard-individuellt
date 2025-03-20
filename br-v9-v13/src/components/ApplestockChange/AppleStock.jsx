@@ -25,7 +25,7 @@ const AppleStock = () => {
   }
 
   return (
-    <section className=" w-11/12 flex flex-col mt-7 mb-7 p-3.5 justify-center items-center box-content shadow-lg bg-white rounded-md">
+    <section className=" w-11/12 flex flex-col mt-7 mb-7 p-3.5 justify-center items-center box-content shadow-lg bg-cardBg rounded-md">
       <h2 className=" font-bold text-3xl md:text-4xl lg:text-5xl justify-center items-center">
         AAPL Stock Price Change over time
       </h2>

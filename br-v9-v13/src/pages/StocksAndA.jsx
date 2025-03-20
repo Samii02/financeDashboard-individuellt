@@ -4,7 +4,7 @@ import HistoricalComparisonComponent from "../components/stocksAndAnalyses/Histo
 
 function StocksAndA() {
   return (
-    <main className="flex flex-col w-full bg-[#faebd7]">
+    <main className="flex flex-col w-full bg-primary">
       <section className="mt-10 mb-25">
         <HistoricalPrices />
       </section>

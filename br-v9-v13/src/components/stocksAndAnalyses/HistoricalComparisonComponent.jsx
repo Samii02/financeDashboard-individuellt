@@ -57,7 +57,7 @@ function HistoricalComparisonComponent() {
         Historical Comparison of Financial Metrics
       </h2>
       <select
-        className="mt-4 mb-4 p-2 border rounded text-[14px] bg-[#fcfcfc]"
+        className="mt-4 mb-4 p-2 border rounded text-[14px] bg-cardBg"
         value={selectedMetric}
         onChange={(e) => setSelectedMetric(e.target.value)}
       >
@@ -67,7 +67,7 @@ function HistoricalComparisonComponent() {
           </option>
         ))}
       </select>
-      <section className="flex justify-center w-11/12 pt-5 h-[420px] bg-[#fcfcfc] rounded-lg shadow-lg">
+      <section className="flex justify-center w-11/12 pt-5 h-[420px] bg-cardBg rounded-lg shadow-lg">
         <ResponsiveContainer width="90%" height={400}>
           <LineChart
             data={historicalData}

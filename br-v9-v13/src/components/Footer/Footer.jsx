@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="w-full bg-blue-600 text-white py-4">
+    <footer className="w-full bg-secondary text-white py-4">
       <div className="max-w-screen-xl mx-auto px-4">
         {/* Grid Layout för footer-sektioner */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
