@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CompanySearchInput from "../components/CompanyFolder/CompanySearchInput";
 import CompanyCard from "../components/CompanyFolder/CompanyCard";
 import nasdaqCompanies from "../components/CompanyFolder/NasdaqCompanies";
+import "../app/App.css";
 
 function Company() {
   const [query, setQuery] = useState("");
@@ -80,7 +81,7 @@ function Company() {
   };
 
   return (
-    <main className="w-full min-h-screen p-4 bg-primary">
+    <main className="w-full min-h-screen p-4 bg-primary custom-container">
       <header className="text-center mb-6">
         <h1 className="text-4xl font-bold font-title">Nasdaq Company Search</h1>
       </header>
