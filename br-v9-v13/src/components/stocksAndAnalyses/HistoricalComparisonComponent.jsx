@@ -57,7 +57,7 @@ function HistoricalComparisonComponent() {
         Historical Comparison of Financial Metrics
       </h2>
       <select
-        className="mt-4 mb-4 p-2 border rounded text-[14px] bg-cardBg font-text"
+        className="mt-4 mb-4 p-2 border rounded text-[14px] bg-cardBg transform transition-transform duration-300 hover:scale-105 font-text"
         value={selectedMetric}
         onChange={(e) => setSelectedMetric(e.target.value)}
       >

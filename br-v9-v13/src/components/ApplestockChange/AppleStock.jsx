@@ -26,11 +26,11 @@ const AppleStock = () => {
 
   return (
     <section className=" w-11/12 flex flex-col mt-7 mb-7 p-3.5 justify-center items-center box-content shadow-lg bg-cardBg rounded-md">
-      <h2 className=" font-bold text-3xl md:text-4xl lg:text-5xl justify-center items-center">
+      <h2 className=" font-bold font-title text-3xl md:text-4xl lg:text-5xl justify-center items-center">
         AAPL Stock Price Change over time
       </h2>
 
-      <ul className="flex flex-row flex-wrap m-2 p-2 gap-1 justify-center items-center">
+      <ul className="flex flex-row flex-wrap m-2 p-2 gap-1 justify-center items-center font-text">
         <li className="rounded-2xl">
           1 Day:{" "}
           <span className={getIndicatorColor(priceChange["1D"])}>
@@ -45,7 +45,7 @@ const AppleStock = () => {
         </li>
       </ul>
 
-      <ul className="flex flex-row flex-wrap m-2 p-2 gap-1 justify-center items-center">
+      <ul className="flex flex-row flex-wrap m-2 p-2 gap-1 justify-center items-center font-text">
         <li className="rounded-2xl">
           1 Month:{" "}
           <span className={getIndicatorColor(priceChange["1M"])}>
@@ -66,7 +66,7 @@ const AppleStock = () => {
         </li>
       </ul>
 
-      <ul className="flex flex-row flex-wrap m-2 p-2 gap-1 justify-center items-center">
+      <ul className="flex flex-row flex-wrap m-2 p-2 gap-1 justify-center items-center font-text">
         <li className="rounded-2xl">
           Year to Date:{" "}
           <span className={getIndicatorColor(priceChange["ytd"])}>

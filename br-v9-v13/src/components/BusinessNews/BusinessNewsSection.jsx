@@ -24,7 +24,7 @@ function BusinessNewsSection() {
 
   return (
     <section className="flex flex-row flex-wrap justify-center items-start">
-      <h3 className="w-full text-center text-3xl md:text-4xl font-bold">
+      <h3 className="w-full text-center text-3xl md:text-4xl font-bold font-title">
         The latest news in economy
       </h3>
       {news.articles.length > 0 ? (
@@ -32,7 +32,7 @@ function BusinessNewsSection() {
           <NewsItem key={newsItem.index} new={newsItem} />
         ))
       ) : (
-        <h4 className="w-full text-center text-3xl md:text-4xl font-bold">
+        <h4 className="w-full text-center text-3xl md:text-4xl font-bold font-text">
           could not find the news you are looking for
         </h4>
       )}
