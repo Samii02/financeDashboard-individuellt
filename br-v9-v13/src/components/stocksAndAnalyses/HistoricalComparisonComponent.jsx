@@ -22,9 +22,11 @@ function HistoricalComparisonComponent() {
     dispatch(fetchKeyMetrics());
   }, [dispatch]);
 
-  if (status === "loading") return <p>Loading historical data...</p>;
-  if (status === "failed") return <p>Error: {error}</p>;
-  if (!data || data.length === 0) return <p>No historical data available</p>;
+  if (status === "loading")
+    return <p className="font-text">Loading historical data...</p>;
+  if (status === "failed") return <p className="font-text">Error: {error}</p>;
+  if (!data || data.length === 0)
+    return <p className="font-text">No historical data available</p>;
 
   const benchmarks = {
     currentRatio: 1.5,

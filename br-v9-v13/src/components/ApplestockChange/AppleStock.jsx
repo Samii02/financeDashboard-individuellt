@@ -18,10 +18,10 @@ const AppleStock = () => {
   // Logging priceChange to see what it contains
   console.log("Apple stock", priceChange);
   // Add defensive checks before accessing the priceChange data
-  if (loading) return <p>Loading AAPL price change...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className="font-text">Loading AAPL price change...</p>;
+  if (error) return <p className="font-text">Error: {error}</p>;
   if (!priceChange || Object.keys(priceChange).length === 0) {
-    return <p>No price change data available.</p>;
+    return <p className="font-text">No price change data available.</p>;
   }
 
   return (

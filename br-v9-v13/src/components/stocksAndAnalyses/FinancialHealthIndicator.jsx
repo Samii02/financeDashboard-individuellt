@@ -16,9 +16,11 @@ function FinancialHealthIndicator() {
     dispatch(fetchKeyMetrics());
   }, [dispatch]);
 
-  if (status === "loading") return <p>Loading financial metrics...</p>;
-  if (status === "failed") return <p>Error: {error}</p>;
-  if (!data || data.length === 0) return <p>No financial data available</p>;
+  if (status === "loading")
+    return <p className="font-text">Loading financial metrics...</p>;
+  if (status === "failed") return <p className="font-text">Error: {error}</p>;
+  if (!data || data.length === 0)
+    return <p className="font-text">No financial data available</p>;
 
   const metrics = data[0];
 

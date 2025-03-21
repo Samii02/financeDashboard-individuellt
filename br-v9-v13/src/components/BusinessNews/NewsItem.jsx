@@ -7,7 +7,7 @@ function NewsItem({ new: newsItem }) {
         {newsItem.publishedAt.replace("T", " ").replace("Z", " ")}
       </p>
       <p className="font-text">{newsItem.description}</p>
-      <p>Full article: </p>
+      <p className="font-text">Full article: </p>
       <a
         className="italic underline break-all"
         href={newsItem.url}

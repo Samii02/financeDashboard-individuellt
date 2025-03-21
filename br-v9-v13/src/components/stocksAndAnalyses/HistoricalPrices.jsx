@@ -24,8 +24,9 @@ function HistoricalPrices() {
     }
   }, [dispatch]);
 
-  if (status === "loading") return <p>Loading historical prices...</p>;
-  if (status === "failed") return <p>Error: {error}</p>;
+  if (status === "loading")
+    return <p className="font-text">Loading historical prices...</p>;
+  if (status === "failed") return <p className="font-text">Error: {error}</p>;
 
   return (
     <section className="flex items-center justify-center flex-col w-full">

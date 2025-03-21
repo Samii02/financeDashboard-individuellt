@@ -12,11 +12,11 @@ function BusinessNewsSection() {
   }, []);
 
   // Add defensive checks before accessing the news data
-  if (loading) return <p>Loading news</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className="font-text">Loading news</p>;
+  if (error) return <p className="font-text">Error: {error}</p>;
   if (!news) {
     return (
-      <p className="w-full text-center text-3xl md:text-4xl font-bold">
+      <p className="w-full text-center text-3xl md:text-4xl font-bold font-text">
         No economic news available.
       </p>
     );
