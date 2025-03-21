@@ -11,7 +11,7 @@ function CompanyCard({ company, removeCompany }) {
   };
 
   return (
-    <article className="relative flex-basis-[250px] bg-cardBg p-4 shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg mt-10 mb-10 mr-2">
+    <article className="relative flex-basis-[250px] bg-cardBg p-4 shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg mt-10 mb-10 mr-2 font-text">
       {/* close button */}
       <button
         onClick={() => removeCompany(company.symbol)}
@@ -20,7 +20,9 @@ function CompanyCard({ company, removeCompany }) {
         <span className="text-lg font-semibold">✕</span>
       </button>
 
-      <h2 className="text-xl font-bold mb-2">{company.companyName}</h2>
+      <h2 className="text-2xl font-bold mb-2 font-title">
+        {company.companyName}
+      </h2>
       <p>
         <strong>Sector:</strong> {company.sector}
       </p>

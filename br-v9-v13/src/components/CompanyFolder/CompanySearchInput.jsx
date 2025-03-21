@@ -14,10 +14,6 @@ function CompanySearchInput({
       className="relative w-full max-w-md mx-auto"
       onSubmit={(e) => e.preventDefault()}
     >
-      <label htmlFor="company-search" className="sr-only">
-        Search for companies
-      </label>
-
       <input
         id="company-search"
         type="text"
@@ -26,7 +22,7 @@ function CompanySearchInput({
           handleSearch(e.target.value);
           setShowDropdown(e.target.value.length > 0); // dropdown closes if input is empty
         }}
-        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100 focus:outline-none bg-cardBg"
+        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-100 focus:outline-none bg-cardBg font-text"
         placeholder="Search here"
         aria-label="Search for companies"
       />
