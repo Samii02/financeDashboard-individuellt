@@ -29,7 +29,7 @@ function HistoricalPrices() {
 
   return (
     <section className="flex items-center justify-center flex-col w-full">
-      <h2 className="text-xl font-bold  mt-1 lg:text-3xl mb-6.5">
+      <h2 className="text-xl font-bold  mt-1 lg:text-3xl mb-6.5 font-title">
         Apples stock worth in $ since the turn of the century
       </h2>
       {data?.historical ? (
@@ -45,18 +45,25 @@ function HistoricalPrices() {
               <XAxis
                 dataKey="date"
                 interval="preserveStartEnd"
-                tick={{ angle: -45, dx: -5, dy: 10, fontSize: 15 }}
+                tick={{
+                  angle: -25,
+                  dx: -5,
+                  dy: 10,
+                  fontFamily: "tahoma",
+                  fontSize: 15,
+                }}
                 tickFormatter={(date) => {
                   const parsedDate = new Date(date);
                   return parsedDate.toLocaleDateString("en-US", {
                     year: "2-digit",
                     month: "short",
+                    day: "numeric",
                   });
                 }}
               />
-              <YAxis tick={{ fontSize: 16 }} />
+              <YAxis tick={{ fontFamily: "tahoma", fontSize: 16 }} />
               <Tooltip />
-              <Legend wrapperStyle={{ paddingTop: 20 }} />
+              <Legend wrapperStyle={{ fontFamily: "tahoma", paddingTop: 20 }} />
               <Line
                 type="linear"
                 dataKey="close"

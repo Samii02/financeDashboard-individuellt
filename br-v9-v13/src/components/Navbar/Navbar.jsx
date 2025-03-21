@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
-    <nav className="flex flex-row justify-evenly ">
+    <nav className="flex flex-row justify-evenly font-text">
       <NavLink
         to="/"
         className="rounded-2xl px-4 py-3 m-2 bg-accent hover:bg-accentHover duration-300 cursor-pointer shadow-md"
@@ -14,7 +14,8 @@ function Navbar() {
         to="/StocksAndA"
         className="rounded-2xl px-4 py-3 m-2 bg-accent hover:bg-accentHover duration-300 cursor-pointer shadow-md"
       >
-        Stock Charts
+        <span className="block md:hidden">Stocks</span>
+        <span className="hidden md:block">Stock Charts</span>
       </NavLink>
       <NavLink
         to="/company"

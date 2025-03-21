@@ -53,11 +53,11 @@ function HistoricalComparisonComponent() {
 
   return (
     <section className="flex flex-col items-center w-full max-w-2xl">
-      <h2 className="text-m lg:text-xl font-bold">
+      <h2 className="text-m lg:text-xl font-bold font-title">
         Historical Comparison of Financial Metrics
       </h2>
       <select
-        className="mt-4 mb-4 p-2 border rounded text-[14px] bg-cardBg"
+        className="mt-4 mb-4 p-2 border rounded text-[14px] bg-cardBg font-text"
         value={selectedMetric}
         onChange={(e) => setSelectedMetric(e.target.value)}
       >
@@ -77,12 +77,19 @@ function HistoricalComparisonComponent() {
             <XAxis
               dataKey="date"
               interval="preserveStartEnd"
-              tick={{ angle: -45, dx: -5, dy: 10, fontSize: 15 }}
+              tick={{
+                angle: -25,
+                dx: -5,
+                dy: 10,
+                fontFamily: "tahoma",
+                fontSize: 15,
+              }}
               tickFormatter={(date) => {
                 const parsedDate = new Date(date);
                 return parsedDate.toLocaleDateString("en-US", {
                   year: "2-digit",
                   month: "short",
+                  day: "numeric",
                 });
               }}
             />
@@ -93,14 +100,14 @@ function HistoricalComparisonComponent() {
                   : [0, (dataMax) => Math.ceil(dataMax * 1.1)]
               }
               tickCount={8}
-              tick={{ fontSize: 16 }}
+              tick={{ fontFamily: "tahoma", fontSize: 16 }}
               allowDecimals={true}
               scale="linear"
               tickFormatter={(value) => Number(value.toPrecision(4))}
             />
 
             <Tooltip />
-            <Legend wrapperStyle={{ paddingTop: 20 }} />
+            <Legend wrapperStyle={{ fontFamily: "tahoma", paddingTop: 25 }} />
             <ReferenceLine
               y={benchmarks[selectedMetric]}
               stroke="red"
