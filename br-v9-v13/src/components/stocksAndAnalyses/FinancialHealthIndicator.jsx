@@ -24,7 +24,7 @@ function FinancialHealthIndicator() {
 
   return (
     <section className="flex justify-center flex-col mt-8 md:mr-5 bg-cardBg p-5 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
-      <h2 className="mb-4 text-m font-bold lg:text-xl font-title">
+      <h2 className="mb-4 text-m font-bold lg:text-2xl font-title">
         Financial Health Indicators
       </h2>
       <ul className="text-[15px] lg:text-[17px] font-text">
