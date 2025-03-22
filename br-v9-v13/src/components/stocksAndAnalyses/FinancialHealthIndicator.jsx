@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchKeyMetrics } from "../../Reducers/keyMetricsSlice";
 
 const getIndicatorColor = (value, goodThreshold, warningThreshold) => {
-  if (value >= goodThreshold) return "text-green-500";
+  if (value >= goodThreshold) return "text-green-700";
   if (value >= warningThreshold) return "text-yellow-500";
-  return "text-red-500";
+  return "text-red-600";
 };
 
 function FinancialHealthIndicator() {

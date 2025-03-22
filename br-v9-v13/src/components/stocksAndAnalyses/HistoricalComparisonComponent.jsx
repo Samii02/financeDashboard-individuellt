@@ -56,7 +56,7 @@ function HistoricalComparisonComponent() {
   return (
     <section className="flex flex-col items-center w-full max-w-2xl">
       <h2 className="text-m lg:text-3xl font-bold font-title">
-        Historical Comparison of Financial Metrics
+        Comparison of Financial Metrics
       </h2>
       <select
         className="mt-4 mb-4 p-2 border rounded text-[14px] bg-cardBg transform transition-transform duration-300 hover:scale-105 font-text"
