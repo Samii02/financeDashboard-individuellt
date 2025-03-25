@@ -5,13 +5,26 @@ function NewsItem({ new: newsItem }) {
   const [hasOverflow, setHasOverflow] = useState(false);
 
   useEffect(() => {
-    const articleElement = articleRef.current;
-    if (articleElement) {
-      const isOverflowing =
-        articleElement.scrollHeight > articleElement.clientHeight;
-      setHasOverflow(isOverflowing);
-    }
-  }, [newsItem]);
+    const checkOverflow = () => {
+      const articleElement = articleRef.current;
+      if (articleElement) {
+        setHasOverflow(
+          articleElement.scrollHeight > articleElement.clientHeight
+        );
+      }
+    };
+
+    setTimeout(checkOverflow, 50);
+    window.addEventListener("resize", checkOverflow);
+
+    const images = articleRef.current?.querySelectorAll("img");
+    images?.forEach((img) => img.addEventListener("load", checkOverflow));
+
+    return () => {
+      window.removeEventListener("resize", checkOverflow);
+      images?.forEach((img) => img.removeEventListener("load", checkOverflow));
+    };
+  }, [newsItem?.title, newsItem?.description, newsItem?.publishedAt]);
 
   const placeholderImage = "Icons/Images/no_image_placeholder.png";
 
