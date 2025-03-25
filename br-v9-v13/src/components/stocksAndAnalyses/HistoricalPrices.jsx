@@ -12,21 +12,20 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-function HistoricalPrices() {
+function HistoricalPrices({ symbol = "AAPL" }) {
   const dispatch = useDispatch();
   const { data, status, error } = useSelector(
     (state) => state.historicalPrices
   );
 
   useEffect(() => {
-    if (!data || data.length === 0) {
-      dispatch(fetchHistoricalPrices());
+    if (!data || data.length === 0 || (symbol && symbol !== data.symbol)) {
+      dispatch(fetchHistoricalPrices(symbol));
     }
-  }, [dispatch]);
+  }, [dispatch, symbol]);
 
-  if (status === "loading")
-    return <p className="font-text">Loading historical prices...</p>;
-  if (status === "failed") return <p className="font-text">Error: {error}</p>;
+  if (status === "loading") return <p>Loading historical prices...</p>;
+  if (status === "failed") return <p>Error: {error}</p>;
 
   return (
     <section className="flex items-center justify-center flex-col w-full">

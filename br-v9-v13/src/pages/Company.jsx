@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CompanySearchInput from "../components/CompanyFolder/CompanySearchInput";
-import CompanyCard from "../components/CompanyFolder/CompanyCard";
+import CompanyList from "../components/CompanyFolder/CompanyList";
 import nasdaqCompanies from "../components/CompanyFolder/NasdaqCompanies";
 import "../app/App.css";
 
@@ -98,16 +98,10 @@ function Company() {
         />
       </section>
 
-      <section className="mt-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-        {/* Loop through selected companies and render a card */}
-        {selectedCompanies.map((company) => (
-          <CompanyCard
-            key={company.symbol}
-            company={company}
-            removeCompany={removeCompany}
-          />
-        ))}
-      </section>
+      <CompanyList
+        companies={selectedCompanies}
+        removeCompany={removeCompany}
+      />
     </main>
   );
 }
