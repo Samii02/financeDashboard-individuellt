@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+/* Custom theme settings for colors and fonts */
 @theme {
     --color-primary: #E3E5E1;
     --color-secondary: #5F7470;
@@ -10,6 +12,7 @@
     --font-text: tahoma;
 }
 
+/* Global reset for html and body */
 html, body {
     margin: 0;
     padding: 0;
@@ -17,15 +20,19 @@ html, body {
     height: 100%;
 }
 
+/* Custom background container */
 .custom-container {
     background-color: #E3E5E1;
     opacity: 1;
     min-height: 100vh;
     width: 100%;
-    background-image: repeating-radial-gradient(
-        circle at 0 0,
-        transparent 0,
-        #E3E5E1 150px
-      ),
-      repeating-linear-gradient(#F8F8EF, #D2D4C8);
+    
+    /* Background image with two types of gradients */
+    background-image: 
+        repeating-radial-gradient( /* Create a repeating radial gradient */
+            circle at 0 0, /* Start the gradient from the top-left corner */
+            transparent 0, /* Starting color (transparent) */
+            #E3E5E1 150px /* Transition to the primary color at 150px */
+        ),
+        repeating-linear-gradient(#F8F8EF, #D2D4C8); /* Create a linear gradient between two colors */
 }
