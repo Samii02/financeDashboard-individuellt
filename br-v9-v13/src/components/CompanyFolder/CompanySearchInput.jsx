@@ -47,7 +47,9 @@ function CompanySearchInput({
 
       {/* error message under input*/}
       {error && (
-        <div className="text-red-600 mt-2 text-center font-text">{error}</div>
+        <article className="text-red-600 mt-2 text-center font-text">
+          {error}
+        </article>
       )}
     </form>
   );
