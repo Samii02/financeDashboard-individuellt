@@ -16,17 +16,17 @@ När man har sökt upp ett företag och fått informationen så finns det också
 
 - **För att skapa vår applikation så har vi använt oss av följande teknikval:**
 
-- **Vite:** För snabb utveckling och byggprocess.
+  - **Vite:** För snabb utveckling och byggprocess.
 
-- **React:** För att skapa ett interaktivt användargränssnitt med hjälp av komponenter.
+  - **React:** För att skapa ett interaktivt användargränssnitt med hjälp av komponenter.
 
-- **React router:** För navigering mellan olika vyer.
+  - **React router:** För navigering mellan olika vyer.
 
-- **Redux Toolkit:** För global state-hantering.
+  - **Redux Toolkit:** För global state-hantering.
 
-- **Tailwind CSS:** För enkel styling och att snabbt kunna skapa responsiva och stiliga användargränssnitt.
+  - **Tailwind CSS:** För enkel styling och att snabbt kunna skapa responsiva och stiliga användargränssnitt.
 
-- **Recharts:** För att visualisera data i grafer.
+  - **Recharts:** För att visualisera data i grafer.
 
 ## Installation
 
