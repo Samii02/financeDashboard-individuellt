@@ -18,7 +18,10 @@ function CompanyCard({ company, removeCompany }) {
 
   // Main card container with styles for responsiveness and interactivity
   return (
-    <article className="bg-cardBg p-4 mt-15 mb-15 w-3xl shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg font-text text-[14px] md:text-lg lg:text-2xl">
+    <article
+      className="bg-cardBg p-4 mt-15 mb-15 w-3xl shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg font-text text-[14px] md:text-lg lg:text-2xl"
+      aria-label="card-containing-company-info"
+    >
       <button
         onClick={() => removeCompany(company.symbol)}
         className="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold hover:bg-red-400 transition transform hover:scale-105 shadow-lg"

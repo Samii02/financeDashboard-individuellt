@@ -37,7 +37,10 @@ function HistoricalPrices({ symbol = "AAPL" }) {
     <section className="flex items-center justify-center flex-col w-full">
       {/* Check if historical data is available */}
       {data?.historical ? (
-        <section className="flex justify-center w-11/12 pt-5 h-[425px] bg-cardBg rounded-lg shadow-lg">
+        <section
+          className="flex justify-center w-11/12 pt-5 h-[425px] bg-cardBg rounded-lg shadow-lg"
+          aria-label="graph-apple-stocks"
+        >
           <ResponsiveContainer width="90%" height={400}>
             <LineChart
               data={[...data.historical]

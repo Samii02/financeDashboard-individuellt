@@ -30,7 +30,10 @@ function FinancialHealthIndicator() {
 
   // Return the JSX structure for displaying the metrics
   return (
-    <section className="flex justify-center flex-col mt-8 md:mr-5 bg-cardBg p-5 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+    <section
+      className="flex justify-center flex-col mt-8 md:mr-5 bg-cardBg p-5 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
+      aria-label="key-metric-color-indicator"
+    >
       <h2 className="mb-4 text-m font-bold lg:text-2xl font-title">
         Financial Health Indicators
       </h2>

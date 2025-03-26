@@ -30,7 +30,10 @@ const AppleStock = () => {
   // Render the component with the stock price changes over different time periods
   return (
     <section className=" w-11/12 flex flex-col m-7 p-3.5 justify-center items-center box-content shadow-lg bg-cardBg rounded-md font-text text-[17px] md:text-lg lg:text-xl">
-      <h2 className=" font-bold font-title text-2xl md:text-3xl lg:text-4xl justify-center items-center">
+      <h2
+        className=" font-bold font-title text-2xl md:text-3xl lg:text-4xl justify-center items-center"
+        aria-label="stock-price-title"
+      >
         AAPL Stock Price Change over time
       </h2>
 

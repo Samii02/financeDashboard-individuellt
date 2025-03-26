@@ -76,7 +76,10 @@ function HistoricalComparisonComponent() {
         ))}
       </select>
       {/* Chart section */}
-      <section className="flex justify-center w-11/12 pt-5 h-[420px] bg-cardBg rounded-lg shadow-lg">
+      <section
+        className="flex justify-center w-11/12 pt-5 h-[420px] bg-cardBg rounded-lg shadow-lg"
+        aria-label="graph-key-metrics"
+      >
         <ResponsiveContainer width="90%" height={400}>
           <LineChart
             data={historicalData}
