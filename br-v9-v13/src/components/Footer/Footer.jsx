@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="w-full bg-secondary text-white py-4">
+    <footer className="w-full bg-secondary text-white py-4 text-xs md:text-[16px] lg:text-xl">
       <div className="max-w-screen-xl mx-auto px-4">
         {/* Grid Layout för footer-sektioner */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-text">
@@ -16,7 +16,7 @@ const Footer = () => {
               Home
             </Link>
             <Link
-              to="StocksAndA"
+              to="StocksAndAnalyses"
               className="footerLink mb-2 pl-1.5 pr-1.5 w-fit border-2 border-transparent hover:border-accent rounded-md duration-300 hover:shadow-lg"
             >
               Stocks And Analyses

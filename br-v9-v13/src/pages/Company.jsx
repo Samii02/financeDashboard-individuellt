@@ -83,7 +83,9 @@ function Company() {
   return (
     <main className="w-full min-h-screen p-4 bg-primary custom-container">
       <header className="text-center mb-6">
-        <h1 className="text-4xl font-bold font-title">Nasdaq Company Search</h1>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold font-title">
+          Nasdaq Company Search
+        </h1>
       </header>
 
       <section>

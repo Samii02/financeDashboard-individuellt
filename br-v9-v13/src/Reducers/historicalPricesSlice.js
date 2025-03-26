@@ -2,24 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const apiKey = "4VaQvzEdvbD227Udssfv4wn00zgHLV3b";
 
-const loadFromLocalStorage = () => {
-  try {
-    const data = localStorage.getItem("historicalPrices");
-    return data ? JSON.parse(data) : [];
-  } catch (error) {
-    console.error("Error loading from local storage:", error);
-    return [];
-  }
-};
-
-const saveToLocalStorage = (data) => {
-  try {
-    localStorage.setItem("historicalPrices", JSON.stringify(data));
-  } catch (error) {
-    console.error("Error saving to local storage:", error);
-  }
-};
-
 // Fetch historical prices for a specific company
 export const fetchHistoricalPrices = createAsyncThunk(
   "historicalPrices/fetch",
@@ -31,16 +13,14 @@ export const fetchHistoricalPrices = createAsyncThunk(
     }
     const data = await response.json();
     console.log("Fetched Data:", data);
-    saveToLocalStorage(data);
     return data;
   }
 );
 
-
 const historicalPricesSlice = createSlice({
   name: "historicalPrices",
   initialState: {
-    data: loadFromLocalStorage(),
+    data: [], // No local storage, default to empty array
     symbol: null,
     status: "idle",
     error: null,
@@ -62,6 +42,5 @@ const historicalPricesSlice = createSlice({
       });
   },
 });
-
 
 export default historicalPricesSlice.reducer;

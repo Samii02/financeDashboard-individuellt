@@ -11,7 +11,7 @@ function Navbar() {
         Home
       </NavLink>
       <NavLink
-        to="/StocksAndA"
+        to="/StocksAndAnalyses"
         className="rounded-2xl px-4 py-3 m-2 bg-accent hover:bg-accentHover  cursor-pointer shadow-md transform transition-transform duration-300 hover:scale-105"
       >
         <span className="block md:hidden">Stocks</span>

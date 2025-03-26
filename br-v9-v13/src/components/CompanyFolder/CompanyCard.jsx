@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import StocksModal from "./StocksModal";
-import HistoricalPrices from "../stocksAndAnalyses/HistoricalPrices";
+import HistoricalPrices from "../stocksAndAnalyses-folder/HistoricalPrices";
 
 function CompanyCard({ company, removeCompany }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,15 +14,15 @@ function CompanyCard({ company, removeCompany }) {
   };
 
   return (
-    <article className="bg-cardBg p-4 w-3xl shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg mt-10 font-text">
+    <article className="bg-cardBg p-4 mt-15 mb-15 w-3xl shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg font-text text-[14px] md:text-lg lg:text-2xl">
       <button
         onClick={() => removeCompany(company.symbol)}
-        className="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-xl font-bold hover:bg-red-400 transition transform hover:scale-105 shadow-lg"
+        className="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold hover:bg-red-400 transition transform hover:scale-105 shadow-lg"
       >
         <span className="text-lg font-semibold">✕</span>
       </button>
 
-      <h2 className="text-2xl font-bold mb-2 font-title">
+      <h2 className="font-bold font-title text-2xl md:text-3xl lg:text-4xl mb-2">
         {company.companyName}
       </h2>
       <p>
@@ -34,7 +34,7 @@ function CompanyCard({ company, removeCompany }) {
       <p>
         <strong>Market Cap:</strong> ${company.mktCap}
       </p>
-      <p>
+      <p className="mb-3">
         <strong>Stock Price:</strong> ${company.price}
       </p>
       <p>
@@ -53,7 +53,6 @@ function CompanyCard({ company, removeCompany }) {
         Show Historical Prices
       </button>
 
-      {/* Use the Modal component */}
       <StocksModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <HistoricalPrices symbol={company.symbol} />
       </StocksModal>

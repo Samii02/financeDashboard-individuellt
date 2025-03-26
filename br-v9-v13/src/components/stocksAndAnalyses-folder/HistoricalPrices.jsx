@@ -24,14 +24,13 @@ function HistoricalPrices({ symbol = "AAPL" }) {
     }
   }, [dispatch, symbol]);
 
-  if (status === "loading") return <p>Loading historical prices...</p>;
-  if (status === "failed") return <p>Error: {error}</p>;
+  if (status === "loading")
+    return <p className="font-text">Loading historical prices...</p>;
+  if (status === "failed")
+    return <p className="text-center font-text m-25">Error: {error}</p>;
 
   return (
     <section className="flex items-center justify-center flex-col w-full">
-      <h2 className="text-xl font-bold mt-1 lg:text-3xl mb-6.5 font-title ml-5 md:ml-0">
-        Apples stock worth in $ since the turn of the century
-      </h2>
       {data?.historical ? (
         <section className="flex justify-center w-11/12 pt-5 h-[425px] bg-cardBg rounded-lg shadow-lg">
           <ResponsiveContainer width="90%" height={400}>

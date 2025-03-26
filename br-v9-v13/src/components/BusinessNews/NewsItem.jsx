@@ -31,7 +31,7 @@ function NewsItem({ new: newsItem }) {
   return (
     <article
       ref={articleRef}
-      className={`bg-cardBg w-full my-10 m-4 p-3 box-content shadow-lg rounded-md md:w-5/12 xl:w-3/12 flex flex-col justify-between h-[400px] overflow-hidden transition-all duration-300 hover:scale-105 ease-in-out ${
+      className={`bg-cardBg w-full md:text-[16px] lg:text-[20] my-10 m-4 p-3 box-content shadow-lg rounded-md md:w-5/12 xl:w-3/12 flex flex-col justify-between h-[400px] overflow-hidden transition-all duration-300 hover:scale-105 ease-in-out ${
         hasOverflow ? "hover:h-[500px]" : ""
       }`}
     >
