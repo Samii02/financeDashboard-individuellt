@@ -28,6 +28,20 @@ När man har sökt upp ett företag och fått informationen så finns det också
 
   - **Recharts:** För att visualisera data i grafer.
 
+## Beskrivning av Ny interaktiv komponent
+
+### StocksModal
+
+- **StocksModal-komponenten är en modal (popup) som visar priser på aktier utifrån ett valt företag med hjäl av deras symbol värde, till exempel AAPL för Apple.**
+
+  - **isOpen (prop):** Denna boolean-prop styr om modalen är synlig eller inte. Om isOpen är false, renderas inte modalen alls och den är gömd från DOM:en.
+
+  - **onClose (prop):** Denna funktionsprop anropas när stäng-knappen (×) klickas, vilket gör att föräldrakomponenten kan hantera logiken för att stänga modalen, som att uppdatera tillståndet.
+
+  - **children (prop):** Innehållet i modalen, som skickas genom children, gör komponenten flexibel och återanvändbar med information om aktier.
+  
+  - Modalen använder funktionen createPortal från React för att rendera sitt innehåll utanför den vanliga DOM-hierarkin, direkt in i document.body. Detta hjälper till att hantera modalöverlägg och förhindrar att de påverkas av föräldrarkomponentens stilar (t.ex. overflow eller z-index-problem).
+
 ## Installation
 
 **Följ dessa steg för att installera och köra applikationen lokalt:**
