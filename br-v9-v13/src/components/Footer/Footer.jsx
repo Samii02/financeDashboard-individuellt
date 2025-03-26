@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="w-full bg-secondary text-white py-4 text-xs md:text-[16px] lg:text-xl">
       <section className="max-w-screen-xl mx-auto px-4">
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-text">
-          //Article containing navigation between pages
+          {/* Article containing navigation between pages */}
           <article className="flex flex-col">
             <h4 className="text-lg font-semibold mb-2">Shortcuts</h4>
             <Link
