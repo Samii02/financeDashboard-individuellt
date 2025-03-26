@@ -32,21 +32,23 @@ function CompanyCard({ company, removeCompany }) {
       <h2 className="font-bold font-title text-2xl md:text-3xl lg:text-4xl mb-2">
         {company.companyName}
       </h2>
-      <p>
-        <strong>Sector:</strong> {company.sector}
-      </p>
-      <p>
-        <strong>Country:</strong> {company.country}
-      </p>
-      <p>
-        <strong>Market Cap:</strong> ${company.mktCap}
-      </p>
-      <p className="mb-3">
-        <strong>Stock Price:</strong> ${company.price}
-      </p>
-      <p>
+      <article className="mb-5">
+        <h4 className="mb-2">
+          <strong>Sector:</strong> {company.sector}
+        </h4>
+        <h4 className="mb-2">
+          <strong>Country:</strong> {company.country}
+        </h4>
+        <h4 className="mb-2">
+          <strong>Market Cap:</strong> ${company.mktCap}
+        </h4>
+        <h4 className="mb-2">
+          <strong>Stock Price:</strong> ${company.price}
+        </h4>
+      </article>
+      <h4>
         <strong>Description:</strong> {LimitDescription(company.description)}
-      </p>
+      </h4>
       <img
         src={company.image}
         alt={company.companyName}
