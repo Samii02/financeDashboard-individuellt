@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import StocksModal from "./StocksModal";
 import HistoricalPrices from "../stocksAndAnalyses-folder/HistoricalPrices";
 
+// CompanyCard component that displays information about a company
 function CompanyCard({ company, removeCompany }) {
+  // State to manage whether the modal is open or closed
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Function to limit the description to 100 words for better readability
   const LimitDescription = (description) => {
     const words = description.split(" ");
     if (words.length > 100) {
@@ -13,6 +16,7 @@ function CompanyCard({ company, removeCompany }) {
     return description;
   };
 
+  // Main card container with styles for responsiveness and interactivity
   return (
     <article className="bg-cardBg p-4 mt-15 mb-15 w-3xl shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg font-text text-[14px] md:text-lg lg:text-2xl">
       <button
@@ -44,6 +48,7 @@ function CompanyCard({ company, removeCompany }) {
         src={company.image}
         alt={company.companyName}
         className="mx-auto w-40 sm:w-36 md:w-42 lg:w-50 xl:w-50 mt-4"
+        aria-label={company.companyName}
       />
 
       <button

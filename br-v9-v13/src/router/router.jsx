@@ -4,23 +4,24 @@ import Home from "../pages/Home";
 import Company from "../pages/Company";
 import StocksAndAnalyses from "../pages/StocksAndAnalyses";
 
+// Create a router using React Router's createBrowserRouter function
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
+    path: "/", // Root path for the application
+    element: <App />, // The App component will be rendered for the root path
     children: [
       {
-        index: true,
-        element: <Home />,
+        index: true, // The index route, rendered when the path is exactly "/"
+        element: <Home />, // Renders the Home component for the index route
       },
 
       {
-        path: "StocksAndAnalyses",
-        element: <StocksAndAnalyses />,
+        path: "StocksAndAnalyses", // Path for the "StocksAndAnalyses" route
+        element: <StocksAndAnalyses />, // Renders the StocksAndAnalyses component for this route
       },
       {
-        path: "Company",
-        element: <Company />,
+        path: "Company", // Path for the "Company" route
+        element: <Company />, // Renders the Company component for this route
       },
     ],
   },

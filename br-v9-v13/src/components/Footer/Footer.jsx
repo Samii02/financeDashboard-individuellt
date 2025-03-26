@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+// Footer component - contains site navigation, GitHub and LinkedIn links, and trademark information
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(); // Gets the current year dynamically
+
   return (
     <footer className="w-full bg-secondary text-white py-4 text-xs md:text-[16px] lg:text-xl">
       <section className="max-w-screen-xl mx-auto px-4">
-        {/* Grid Layout för footer-sektioner */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-text">
-          {/* Shortcuts Section */}
+          //Article containing navigation between pages
           <article className="flex flex-col">
             <h4 className="text-lg font-semibold mb-2">Shortcuts</h4>
             <Link

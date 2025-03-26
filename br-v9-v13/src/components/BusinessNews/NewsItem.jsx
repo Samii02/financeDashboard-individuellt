@@ -62,6 +62,7 @@ function NewsItem({ new: newsItem }) {
         href={newsItem.url}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="external link to article"
       >
         {newsItem.url}
       </a>

@@ -1,5 +1,6 @@
 import React from "react";
 
+// CompanySearchInput component handles user input for searching companies
 function CompanySearchInput({
   query,
   handleSearch,

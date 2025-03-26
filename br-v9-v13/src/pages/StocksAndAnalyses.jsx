@@ -3,6 +3,7 @@ import FinancialHealthIndicator from "../components/stocksAndAnalyses-folder/Fin
 import HistoricalComparisonComponent from "../components/stocksAndAnalyses-folder/HistoricalComparisonComponent";
 import "../app/App.css";
 
+// Main component to render the Stocks and Analyses section
 function stocksAndAnalyses() {
   return (
     <main className="flex flex-col w-full bg-primary custom-container">

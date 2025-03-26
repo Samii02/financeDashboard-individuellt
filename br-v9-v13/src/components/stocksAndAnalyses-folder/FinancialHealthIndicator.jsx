@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchKeyMetrics } from "../../Reducers/keyMetricsSlice";
 
+// Function to determine text color based on financial metric value
 const getIndicatorColor = (value, goodThreshold, warningThreshold) => {
   if (value >= goodThreshold) return "text-green-700";
   if (value >= warningThreshold) return "text-yellow-500";
@@ -13,17 +14,21 @@ function FinancialHealthIndicator() {
   const { data, status, error } = useSelector((state) => state.keyMetrics);
 
   useEffect(() => {
-    dispatch(fetchKeyMetrics());
+    dispatch(fetchKeyMetrics()); // Fetch financial metrics when component mounts
   }, [dispatch]);
 
+  // Handle different loading states
   if (status === "loading")
     return <p className="font-text">Loading financial metrics...</p>;
   if (status === "failed") return <p className="font-text">Error: {error}</p>;
   if (!data || data.length === 0)
     return <p className="font-text">No financial data available</p>;
 
+  // Access the first set of metrics from the data array
   const metrics = data[0];
+  console.log("metric data", data);
 
+  // Return the JSX structure for displaying the metrics
   return (
     <section className="flex justify-center flex-col mt-8 md:mr-5 bg-cardBg p-5 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
       <h2 className="mb-4 text-m font-bold lg:text-2xl font-title">

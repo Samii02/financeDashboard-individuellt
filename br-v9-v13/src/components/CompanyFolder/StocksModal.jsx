@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import { createPortal } from "react-dom";
 
+// StocksModal component - a modal (popup) for displaying stock-related information
 function StocksModal({ isOpen, onClose, children }) {
   const modalRef = useRef(null);
 
+  // If the modal is not open, do not render anything (prevents unnecessary rendering)
   if (!isOpen) return null;
 
   return createPortal(
@@ -21,7 +23,7 @@ function StocksModal({ isOpen, onClose, children }) {
         {children}
       </section>
     </section>,
-    document.body
+    document.body //* Renders the modal outside the regular component tree using `createPortal`
   );
 }
 
