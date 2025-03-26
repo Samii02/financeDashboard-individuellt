@@ -1,33 +1,44 @@
 import { useEffect, useRef, useState } from "react";
 
+// NewsItem component that displays individual news article details
 function NewsItem({ new: newsItem }) {
+  // Create a reference to the article element
   const articleRef = useRef(null);
   const [hasOverflow, setHasOverflow] = useState(false);
 
+  // *useEffect hook to handle side effects, particularly checking for overflow
   useEffect(() => {
+    // Function to check if the content overflows the article container
     const checkOverflow = () => {
-      const articleElement = articleRef.current;
+      const articleElement = articleRef.current; //* Get the article element using the reference
       if (articleElement) {
         setHasOverflow(
+          //* Set state to true if the content overflows (scrollHeight > clientHeight)
           articleElement.scrollHeight > articleElement.clientHeight
         );
       }
     };
 
+    // Calling the checkOverflow function with a slight delay (50ms)
     setTimeout(checkOverflow, 50);
+    // Adding an event listener to check overflow on window resize
     window.addEventListener("resize", checkOverflow);
 
+    // Selecting all images inside the article and adding an event listener to check overflow when images load
     const images = articleRef.current?.querySelectorAll("img");
     images?.forEach((img) => img.addEventListener("load", checkOverflow));
 
+    // Cleanup function to remove event listeners when the component is unmounted or updated
     return () => {
       window.removeEventListener("resize", checkOverflow);
       images?.forEach((img) => img.removeEventListener("load", checkOverflow));
     };
   }, [newsItem?.title, newsItem?.description, newsItem?.publishedAt]);
 
+  // Placeholder image for cases where the news item does not have an image
   const placeholderImage = "Icons/Images/no_image_placeholder.png";
 
+  // Return the JSX structure for displaying the news item
   return (
     <article
       ref={articleRef}

@@ -3,27 +3,31 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchStockPriceChange } from "../../Reducers/AppleSlice";
 
 const AppleStock = () => {
+  // Initializing dispatch to send actions and using useSelector to get data from Redux state
   const dispatch = useDispatch();
   const { priceChange, loading, error } = useSelector((state) => state.stock);
 
+  // Fetching stock price data when the component mounts
   useEffect(() => {
     dispatch(fetchStockPriceChange());
   }, []);
 
+  // Helper function to determine the color based on the stock price change value
   const getIndicatorColor = (value) => {
     if (value > 0) return "text-green-500";
     if (value < 0) return "text-red-500";
     return "text-yellow500";
   };
-  // Logging priceChange to see what it contains
   console.log("Apple stock", priceChange);
-  // Add defensive checks before accessing the priceChange data
+
+  // Handling different states of the fetch request (loading, error, no data, etc.)
   if (loading) return <p className="font-text">Loading AAPL price change...</p>;
   if (error) return <p className="font-text">Error: {error}</p>;
   if (!priceChange || Object.keys(priceChange).length === 0) {
     return <p className="font-text">No price change data available.</p>;
   }
 
+  // Render the component with the stock price changes over different time periods
   return (
     <section className=" w-11/12 flex flex-col m-7 p-3.5 justify-center items-center box-content shadow-lg bg-cardBg rounded-md font-text text-[17px] md:text-lg lg:text-xl">
       <h2 className=" font-bold font-title text-2xl md:text-3xl lg:text-4xl justify-center items-center">
